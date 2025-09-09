@@ -1,4 +1,4 @@
-appId: chat.rocket.reactnative
+appId: de.jft.immosnapp
 name: Create Team and Delete
 onFlowStart:
   - runFlow: '../../helpers/setup.yaml'

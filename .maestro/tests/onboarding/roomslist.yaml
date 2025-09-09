@@ -1,4 +1,4 @@
-appId: chat.rocket.reactnative
+appId: de.jft.immosnapp
 name: Rooms List
 onFlowStart:
   - runFlow: '../../helpers/setup.yaml'

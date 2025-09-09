@@ -12,6 +12,7 @@ import * as HeaderButton from '../../containers/Header/components/HeaderButton';
 import { TServerHistoryModel } from '../../definitions';
 import I18n from '../../i18n';
 import { useTheme } from '../../theme';
+import { DEFAULT_SERVER_URL } from '../../lib/constants';
 import { isAndroid, isTablet } from '../../lib/methods/helpers';
 import EventEmitter from '../../lib/methods/helpers/events';
 import ServerInput from './components/ServerInput';
@@ -41,7 +42,7 @@ const NewServerView = ({ navigation }: INewServerViewProps) => {
 		setValue,
 		setError,
 		clearErrors
-	} = useForm({ mode: 'onChange', defaultValues: { workspaceUrl: '' } });
+	} = useForm({ mode: 'onChange', defaultValues: { workspaceUrl: DEFAULT_SERVER_URL } });
 
 	const workspaceUrl = watch('workspaceUrl');
 	const [showBottomInfo, setShowBottomInfo] = useState<boolean>(true);

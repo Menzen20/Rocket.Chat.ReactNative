@@ -14,8 +14,8 @@ export type TDataKeys = keyof TData;
 export type TDataChannels = keyof typeof data.channels;
 
 const data = {
-	server: 'https://mobile.rocket.chat',
-	alternateServer: 'https://stable.rocket.chat',
+	server: 'https://chat.bl2020.com',
+	alternateServer: 'https://chat.bl2020.com',
 	...account,
 	channels: {
 		detoxpublic: {

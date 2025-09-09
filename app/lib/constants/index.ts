@@ -15,3 +15,4 @@ export * from './tablet';
 export * from './mediaAutoDownload';
 export * from './userAgent';
 export * from './debounceConfig';
+export const DEFAULT_SERVER_URL = 'https://chat.bl2020.com';

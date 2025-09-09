@@ -35,7 +35,7 @@ platform :ios do
     )
     pilot(
       ipa: 'ios/Rocket.Chat.ipa',
-      app_identifier: options[:official] ? 'chat.rocket.ios' : 'chat.rocket.reactnative',
+      app_identifier: options[:official] ? 'chat.rocket.ios' : 'de.jft.immosnapp',
       skip_waiting_for_build_processing: true
     )
     upload_symbols_to_crashlytics(dsym_path: "./ios/Rocket.Chat.app.dSYM.zip")
@@ -56,7 +56,7 @@ platform :ios do
     )
     pilot(
       ipa: 'Rocket.Chat.ipa',
-      app_identifier: options[:official] ? 'chat.rocket.ios' : 'chat.rocket.reactnative',
+      app_identifier: options[:official] ? 'chat.rocket.ios' : 'de.jft.immosnapp',
       skip_waiting_for_build_processing: true
     )
     upload_symbols_to_crashlytics(dsym_path: "Rocket.Chat.app.dSYM.zip")
@@ -76,9 +76,9 @@ platform :ios do
       in_house: false
     )
     match(type: "appstore")
-    get_provisioning_profile(app_identifier: "chat.rocket.reactnative.ShareExtension")
-    get_provisioning_profile(app_identifier: "chat.rocket.reactnative.NotificationService")
-    get_provisioning_profile(app_identifier: "chat.rocket.reactnative.watchkitapp")
+    get_provisioning_profile(app_identifier: "de.jft.immosnapp.Kjuup-Share")
+    get_provisioning_profile(app_identifier: "de.jft.immosnapp.NotificationService")
+    get_provisioning_profile(app_identifier: "de.jft.immosnapp.watchkitapp")
     # pem(api_key: api_key) # still uses Spaceship http://docs.fastlane.tools/actions/pem/#how-does-it-work
     gym(
       scheme: "RocketChatRN",

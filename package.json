@@ -11,8 +11,8 @@
 		"prettier-lint": "prettier --write . && yarn lint",
 		"ios": "npx react-native run-ios",
 		"pod-install": "bundle exec pod install --project-directory=ios",
-		"android": "npx react-native run-android --mode=experimentalDebug --main-activity chat.rocket.reactnative.MainActivity",
-		"android-whitelabel": "npx react-native run-android --main-activity chat.rocket.reactnative.MainActivity --mode=experimentalDebug --appId",
+		"android": "npx react-native run-android --mode=experimentalDebug --main-activity de.jft.immosnapp.MainActivity",
+		"android-whitelabel": "npx react-native run-android --main-activity de.jft.immosnapp.MainActivity --mode=experimentalDebug --appId",
 		"log-android": "react-native log-android",
 		"snyk-protect": "snyk protect",
 		"postinstall": "patch-package",
@@ -226,7 +226,7 @@
 		"type": "modules",
 		"jsSrcsDir": "./app/lib/native",
 		"android": {
-			"javaPackageName": "chat.rocket.reactnative.networking"
+			"javaPackageName": "de.jft.immosnapp.networking"
 		}
 	}
 }

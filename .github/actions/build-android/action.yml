@@ -93,7 +93,7 @@ runs:
         echo -e "VERSIONCODE=${{ inputs.BUILD_VERSION }}" >> ./gradle.properties
 
         if [[ "${{ inputs.type }}" == "experimental" ]]; then
-          echo -e "APPLICATION_ID=chat.rocket.reactnative" >> ./gradle.properties
+          echo -e "APPLICATION_ID=de.jft.immosnapp" >> ./gradle.properties
           echo -e "BugsnagAPIKey=${{ inputs.BUGSNAG_KEY }}" >> ./gradle.properties
           echo -e "KEYSTORE=${{ inputs.KEYSTORE_EXPERIMENTAL }}" >> ./gradle.properties
           echo -e 'KEYSTORE_PASSWORD=${{ inputs.KEYSTORE_EXPERIMENTAL_PASSWORD }}' >> ./gradle.properties

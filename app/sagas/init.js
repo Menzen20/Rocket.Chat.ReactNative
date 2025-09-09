@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { CURRENT_SERVER, TOKEN_KEY } from '../lib/constants';
 import UserPreferences from '../lib/methods/userPreferences';
-import { selectServerRequest } from '../actions/server';
+import { selectServerRequest, serverRequest } from '../actions/server';
 import { setAllPreferences } from '../actions/sortPreferences';
 import { APP } from '../actions/actionsTypes';
 import log from '../lib/methods/helpers/log';
@@ -15,6 +15,7 @@ import { RootEnum } from '../definitions';
 import { getSortPreferences } from '../lib/methods';
 import { deepLinkingClickCallPush } from '../actions/deepLinking';
 import { getServerById } from '../lib/database/services/Server';
+import { DEFAULT_SERVER_URL } from '../lib/constants';
 
 export const initLocalSettings = function* initLocalSettings() {
 	const sortPreferences = getSortPreferences();
@@ -28,6 +29,8 @@ const restore = function* restore() {
 		let userId = UserPreferences.getString(`${TOKEN_KEY}-${server}`);
 
 		if (!server) {
+			// No current server selected: initialize with default workspace URL
+			yield put(serverRequest(DEFAULT_SERVER_URL));
 			yield put(appStart({ root: RootEnum.ROOT_OUTSIDE }));
 		} else if (!userId) {
 			const serversDB = database.servers;

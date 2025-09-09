@@ -135,7 +135,7 @@ const AuthenticationWebView = () => {
 	useLayoutEffect(() => {
 		navigation.setOptions({
 			headerLeft: () => <HeaderButton.CloseModal />,
-			title: ['saml', 'cas', 'iframe'].includes(authType) ? 'SSO' : 'OAuth'
+			title: ['saml', 'cas', 'iframe'].includes(authType) ? '' : ''
 		});
 	}, [authType, navigation]);
 
