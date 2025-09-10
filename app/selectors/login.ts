@@ -15,7 +15,7 @@ export interface IServices {
 const getUser = (state: IApplicationState): IUser => state.login?.user as IUser;
 const getLoginServices = (state: IApplicationState) => (state.login.services as IServices) || {};
 const getShowFormLoginSetting = (state: IApplicationState) => (state.settings.Accounts_ShowFormLogin as boolean) || false;
-const getIframeEnabledSetting = (state: IApplicationState) => (state.settings.Accounts_iframe_enabled as boolean) || false;
+const getIframeEnabledSetting = (state: IApplicationState) => false;
 
 export const getUserSelector = createSelector([getUser], user => user);
 

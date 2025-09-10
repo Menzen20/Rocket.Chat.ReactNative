@@ -112,7 +112,8 @@ export const defaultSettings = {
 		type: 'valueAsBoolean'
 	},
 	Accounts_iframe_enabled: {
-		type: 'valueAsBoolean'
+		type: 'valueAsBoolean',
+		value: false
 	},
 	Accounts_Iframe_api_url: {
 		type: 'valueAsString'

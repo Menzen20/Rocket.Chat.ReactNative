@@ -29,7 +29,6 @@ const useWorkspaceViewSelector = () =>
 		Site_Url: state.settings.Site_Url as string,
 		Assets_favicon_512: state.settings.Assets_favicon_512 as IAssetsFavicon512,
 		registrationForm: state.settings.Accounts_RegistrationForm as string,
-		Accounts_iframe_enabled: state.settings.Accounts_iframe_enabled as boolean,
 		showLoginButton: getShowLoginButton(state),
 		inviteLinkToken: state.inviteLinks.token
 	}));
@@ -42,7 +41,6 @@ const WorkspaceView = () => {
 	const workspaceDomain = useWorkspaceDomain();
 
 	const {
-		Accounts_iframe_enabled,
 		Assets_favicon_512,
 		Site_Name,
 		Site_Url,
@@ -51,6 +49,8 @@ const WorkspaceView = () => {
 		server,
 		showLoginButton
 	} = useWorkspaceViewSelector();
+	
+	const Accounts_iframe_enabled = false;
 
 	useLayoutEffect(() => {
 		navigation.setOptions({

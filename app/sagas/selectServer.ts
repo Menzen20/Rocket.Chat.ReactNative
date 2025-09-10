@@ -241,7 +241,7 @@ const handleServerRequest = function* handleServerRequest({ server, username, fr
 			yield getLoginSettings({ server, serverVersion: serverInfo.version });
 			Navigation.navigate('WorkspaceView');
 
-			const Accounts_iframe_enabled = yield* appSelector(state => state.settings.Accounts_iframe_enabled);
+			const Accounts_iframe_enabled = false;
 			if (fromServerHistory && !Accounts_iframe_enabled) {
 				Navigation.navigate('LoginView', { username });
 			}
